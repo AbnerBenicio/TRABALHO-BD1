@@ -74,6 +74,43 @@ b)
     CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
     CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
 
+**USUÁRIO:** Tabela que contém informações sobre os usuários da plataforma, incluindo alunos, tutores e funcionários.  
+- *id:* Campo que armazena um identificador único para cada usuário na plataforma.  
+- *nome:* Campo que guarda o nome do usuário.  
+- *email:* Campo que armazena o endereço de e-mail associado ao usuário.  
+- *senha:* Campo que contém a senha de acesso do usuário.
+
+**ALUNO_TUTOR:** Subtabela que herda os atributos da tabela USUÁRIO e adiciona informações específicas para alunos e tutores.  
+- *pontuacao:* Campo que registra a pontuação obtida pelo aluno/tutor.  
+
+**FUNCIONÁRIO:** Subtabela que herda os atributos da tabela USUÁRIO e adiciona informações específicas para funcionários.  
+- *matricula:* Campo que registra a matrícula única de cada funcionário na plataforma.  
+- *salario:* Campo que armazena o salário do funcionário.
+
+**TEMA:** Tabela que contém informações sobre os temas disponíveis na plataforma.  
+- *id:* Campo que armazena um identificador único para cada tema.  
+- *descricao:* Campo que guarda a descrição do tema.  
+
+**SALA:** Tabela que registra informações sobre as salas de tutoria criadas.  
+- *id:* Campo que armazena um identificador único para cada sala.  
+
+**ARTIGO:** Tabela que guarda informações sobre o artigo que é publicado por um aluno/tutor.  
+- *id:* Campo que armazena um identificador único para cada artigo.  
+- *titulo:* Campo que referencia o título do artigo.
+- *descricao:* Campo que armazena a descrição do artigo .  
+
+**CATEGORIA:** Tabela que armazena informações sobre a categoria de um tema.  
+- *id:* Campo que armazena um identificador único para cada publicação.  
+- *descricao:* Campo que referencia a descrição da categoria.  
+
+**PRODUTO:** Tabela que guarda informações sobre os produtos que podem ser trocados por pontos.  
+- *id:* Campo que armazena um identificador único para cada produto.  
+- *nome:* Campo criado para armazenar o nome do produto.  
+- *valor:* Campo que referencia o valor do produto(em pontos).  
+
+
+    
+
 > # Marco de Entrega 01: Do item 1 até o item 5.2 (5 PTS) <br>
 
 ### 6    MODELO LÓGICO<br>
