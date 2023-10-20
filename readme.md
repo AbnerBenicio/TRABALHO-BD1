@@ -114,6 +114,9 @@ b)
         b) verificação de correspondencia com o modelo conceitual 
         (não serão aceitos modelos que não estejam em conformidade)
 
+ ![logico_trabalho_img](https://github.com/AbnerBenicio/TRABALHO-BD1/assets/112874576/b50c8e42-d443-4280-8ce0-2654684f253e)
+
+
 ### 7    MODELO FÍSICO<br>
 
         a) inclusão das instruções de criacão das estruturas em SQL/DDL 
