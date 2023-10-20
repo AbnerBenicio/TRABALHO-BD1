@@ -59,7 +59,8 @@ b)
         Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null, 
         e tuplas falsas (Aplicar os conceitos de normalização abordados).   
 
-![image](https://github.com/AbnerBenicio/TRABALHO-BD1/assets/112874576/5f7059d3-f0b7-42d7-a236-7468e74a5762)
+![image](https://github.com/AbnerBenicio/TRABALHO-BD1/assets/112874576/43f52930-e6e9-467a-9699-c9a161a20720)
+
 )
 
 #### 5.1 Validação do Modelo Conceitual
