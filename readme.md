@@ -80,8 +80,7 @@ b)
 - *email:* Campo que armazena o endereço de e-mail associado ao usuário.  
 - *senha:* Campo que contém a senha de acesso do usuário.
 
-**ALUNO_TUTOR:** Subtabela que herda os atributos da tabela USUÁRIO e adiciona informações específicas para alunos e tutores.  
-- *pontuacao:* Campo que registra a pontuação obtida pelo aluno/tutor.  
+
 
 **FUNCIONÁRIO:** Subtabela que herda os atributos da tabela USUÁRIO e adiciona informações específicas para funcionários.  
 - *matricula:* Campo que registra a matrícula única de cada funcionário na plataforma.  
@@ -103,10 +102,6 @@ b)
 - *id:* Campo que armazena um identificador único para cada publicação.  
 - *descricao:* Campo que referencia a descrição da categoria.  
 
-**PRODUTO:** Tabela que guarda informações sobre os produtos que podem ser trocados por pontos.  
-- *id:* Campo que armazena um identificador único para cada produto.  
-- *nome:* Campo criado para armazenar o nome do produto.  
-- *valor:* Campo que referencia o valor do produto(em pontos).  
 
 
     
