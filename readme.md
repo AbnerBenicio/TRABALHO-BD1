@@ -131,7 +131,7 @@ b)
     1) Criar um novo banco de dados para testar a restauracao (em caso de falha na restauração o grupo não pontuará neste quesito)
         2) script deve ser incluso no template em um arquivo no formato .SQL
 
- '''
+```
  #INSERT NA TABELA ARTIGO
  -- Artigo 1
 INSERT INTO tutoria."ARTIGO" (fk_usuario_id, fk_tema_id, fk_funcionario_id, descricao, titulo)
@@ -353,7 +353,7 @@ VALUES
     ('Saúde'),
     ('Negócios');
 
- '''
+```
 
 ### 9    TABELAS E PRINCIPAIS CONSULTAS<br>
 
