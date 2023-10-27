@@ -123,6 +123,183 @@ b)
         a) inclusão das instruções de criacão das estruturas em SQL/DDL 
         (criação de tabelas, alterações, etc..) 
 
+```
+BEGIN;
+
+
+DROP TABLE IF EXISTS public.usuario;
+
+CREATE TABLE IF NOT EXISTS public.usuario
+(
+    id integer NOT NULL DEFAULT nextval('usuario_id_seq'::regclass),
+    nome character varying(80) COLLATE pg_catalog."default",
+    email character varying(80) COLLATE pg_catalog."default",
+    senha character varying(20) COLLATE pg_catalog."default",
+    CONSTRAINT usuario_pkey PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS tutoria."ARTIGO";
+
+CREATE TABLE IF NOT EXISTS tutoria."ARTIGO"
+(
+    id integer NOT NULL DEFAULT nextval('tutoria.artigo_id_seq'::regclass),
+    fk_usuario_id integer NOT NULL DEFAULT nextval('tutoria.artigo_fk_usuario_id_seq'::regclass),
+    fk_tema_id integer NOT NULL DEFAULT nextval('tutoria.artigo_fk_tema_id_seq'::regclass),
+    fk_funcionario_id integer NOT NULL DEFAULT nextval('tutoria.artigo_fk_funcionario_id_seq'::regclass),
+    descricao character varying(80) COLLATE pg_catalog."default",
+    titulo character varying(10) COLLATE pg_catalog."default" NOT NULL
+);
+
+DROP TABLE IF EXISTS tutoria."CATEGORIA";
+
+CREATE TABLE IF NOT EXISTS tutoria."CATEGORIA"
+(
+    id integer NOT NULL DEFAULT nextval('tutoria.categoria_id_seq'::regclass),
+    descricao character varying(50) COLLATE pg_catalog."default",
+    CONSTRAINT categoria_pkey PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS tutoria."FUNCIONARIO";
+
+CREATE TABLE IF NOT EXISTS tutoria."FUNCIONARIO"
+(
+    salario double precision,
+    id_funcionario integer NOT NULL DEFAULT nextval('tutoria.funcionario_id_funcionario_seq'::regclass),
+    fk_usuario_id integer NOT NULL DEFAULT nextval('tutoria.funcionario_fk_usuario_id_seq'::regclass),
+    matricula character varying(10) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT funcionario_pkey PRIMARY KEY (id_funcionario)
+);
+
+DROP TABLE IF EXISTS tutoria."PARTICIPA";
+
+CREATE TABLE IF NOT EXISTS tutoria."PARTICIPA"
+(
+    id integer NOT NULL DEFAULT nextval('tutoria."PARTICIPA_id_seq"'::regclass),
+    fk_sala_id integer NOT NULL DEFAULT nextval('tutoria."PARTICIPA_fk_sala_id_seq"'::regclass),
+    fk_usuario_id integer NOT NULL DEFAULT nextval('tutoria."PARTICIPA_fk_usuario_id_seq"'::regclass),
+    CONSTRAINT "PARTICIPA_pkey" PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS tutoria."SALA";
+
+CREATE TABLE IF NOT EXISTS tutoria."SALA"
+(
+    id integer NOT NULL DEFAULT nextval('tutoria."SALA_id_seq"'::regclass),
+    fk_tema_id integer NOT NULL DEFAULT nextval('tutoria."SALA_fk_tema_id_seq"'::regclass),
+    fk_usuario_id integer NOT NULL DEFAULT nextval('tutoria."SALA_fk_usuario_id_seq"'::regclass),
+    data_criacao date NOT NULL,
+    sts_valida boolean NOT NULL,
+    CONSTRAINT "SALA_pkey" PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS tutoria."TEMA";
+
+CREATE TABLE IF NOT EXISTS tutoria."TEMA"
+(
+    id integer NOT NULL DEFAULT nextval('tutoria."TEMA_id_seq"'::regclass),
+    fk_categoria_id integer NOT NULL DEFAULT nextval('tutoria."TEMA_fk_categoria_id_seq"'::regclass),
+    descricao character varying(50) COLLATE pg_catalog."default",
+    CONSTRAINT "TEMA_pkey" PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS tutoria."USUARIO";
+
+CREATE TABLE IF NOT EXISTS tutoria."USUARIO"
+(
+    id integer NOT NULL DEFAULT nextval('tutoria.usuario_id_seq'::regclass),
+    nome character varying(80) COLLATE pg_catalog."default" NOT NULL,
+    senha character varying(80) COLLATE pg_catalog."default" NOT NULL,
+    email character varying(80) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT usuario_pkey PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS tutoria."USUARIO_TEMA";
+
+CREATE TABLE IF NOT EXISTS tutoria."USUARIO_TEMA"
+(
+    id integer NOT NULL DEFAULT nextval('tutoria."USUARIO_TEMA_id_seq"'::regclass),
+    nivel_conhecimento integer NOT NULL,
+    fk_usuario_id integer NOT NULL DEFAULT nextval('tutoria."USUARIO_TEMA_fk_usuario_id_seq"'::regclass),
+    fk_tema_id integer NOT NULL DEFAULT nextval('tutoria."USUARIO_TEMA_fk_tema_id_seq"'::regclass),
+    CONSTRAINT "USUARIO_TEMA_pkey" PRIMARY KEY (id)
+);
+
+ALTER TABLE IF EXISTS tutoria."ARTIGO"
+    ADD CONSTRAINT fk_funcionario_id FOREIGN KEY (fk_funcionario_id)
+    REFERENCES tutoria."FUNCIONARIO" (id_funcionario) MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE RESTRICT;
+
+
+ALTER TABLE IF EXISTS tutoria."ARTIGO"
+    ADD CONSTRAINT fk_tema_id FOREIGN KEY (fk_tema_id)
+    REFERENCES tutoria."TEMA" (id) MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS tutoria."ARTIGO"
+    ADD CONSTRAINT fk_usuario_id FOREIGN KEY (fk_usuario_id)
+    REFERENCES tutoria."USUARIO" (id) MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE SET NULL;
+
+
+ALTER TABLE IF EXISTS tutoria."FUNCIONARIO"
+    ADD CONSTRAINT fk_usuario_id FOREIGN KEY (fk_usuario_id)
+    REFERENCES tutoria."USUARIO" (id) MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION;
+
+
+ALTER TABLE IF EXISTS tutoria."PARTICIPA"
+    ADD CONSTRAINT fk_tema_id FOREIGN KEY (fk_sala_id)
+    REFERENCES tutoria."SALA" (id) MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS tutoria."PARTICIPA"
+    ADD CONSTRAINT fk_usuario_id FOREIGN KEY (fk_usuario_id)
+    REFERENCES tutoria."USUARIO" (id) MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS tutoria."SALA"
+    ADD CONSTRAINT fk_tema_id FOREIGN KEY (fk_tema_id)
+    REFERENCES tutoria."TEMA" (id) MATCH SIMPLE
+    ON UPDATE CASCADE
+    ON DELETE CASCADE;
+
+
+ALTER TABLE IF EXISTS tutoria."TEMA"
+    ADD CONSTRAINT fk_categoria_id FOREIGN KEY (fk_categoria_id)
+    REFERENCES tutoria."CATEGORIA" (id) MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE RESTRICT;
+
+
+ALTER TABLE IF EXISTS tutoria."USUARIO_TEMA"
+    ADD CONSTRAINT fk_tema_id FOREIGN KEY (fk_tema_id)
+    REFERENCES tutoria."TEMA" (id) MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+
+
+ALTER TABLE IF EXISTS tutoria."USUARIO_TEMA"
+    ADD CONSTRAINT fk_usuario_id FOREIGN KEY (fk_usuario_id)
+    REFERENCES tutoria."USUARIO" (id) MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION;
+
+END;
+```
+
 ### 8    INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 
         a) Script das instruções relativas a inclusão de dados 
