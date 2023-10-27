@@ -131,6 +131,230 @@ b)
     1) Criar um novo banco de dados para testar a restauracao (em caso de falha na restauração o grupo não pontuará neste quesito)
         2) script deve ser incluso no template em um arquivo no formato .SQL
 
+ '''
+ #INSERT NA TABELA ARTIGO
+ -- Artigo 1
+INSERT INTO tutoria."ARTIGO" (fk_usuario_id, fk_tema_id, fk_funcionario_id, descricao, titulo)
+VALUES (1, 1, 1, 'Este é um artigo sobre álgebra linear.', 'Álg Lin');
+
+-- Artigo 2
+INSERT INTO tutoria."ARTIGO" (fk_usuario_id, fk_tema_id, fk_funcionario_id, descricao, titulo)
+VALUES (2, 2, 2, 'Neste artigo, abordamos a biologia celular.', 'Bio Cel');
+
+-- Artigo 3
+INSERT INTO tutoria."ARTIGO" (fk_usuario_id, fk_tema_id, fk_funcionario_id, descricao, titulo)
+VALUES (3, 3, 1, 'A Idade Média foi um período fascinante na história.', 'Idade Méd');
+
+-- Artigo 4
+INSERT INTO tutoria."ARTIGO" (fk_usuario_id, fk_tema_id, fk_funcionario_id, descricao, titulo)
+VALUES (4, 4, 2, 'Aprenda as técnicas de pintura a óleo neste artigo.', 'Pintura Ól');
+
+-- Artigo 5
+INSERT INTO tutoria."ARTIGO" (fk_usuario_id, fk_tema_id, fk_funcionario_id, descricao, titulo)
+VALUES (5, 5, 1, 'Descubra as estratégias de marketing de sucesso.', 'Estratégias');
+
+-- Artigo 6
+INSERT INTO tutoria."ARTIGO" (fk_usuario_id, fk_tema_id, fk_funcionario_id, descricao, titulo)
+VALUES (6, 1, 2, 'Este é um segundo artigo sobre álgebra linear.', 'Álg Lin 2');
+
+-- Artigo 7
+INSERT INTO tutoria."ARTIGO" (fk_usuario_id, fk_tema_id, fk_funcionario_id, descricao, titulo)
+VALUES (7, 2, 1, 'A biologia celular é um campo em constante evolução.', 'Bio Cel Ev');
+
+-- Artigo 8
+INSERT INTO tutoria."ARTIGO" (fk_usuario_id, fk_tema_id, fk_funcionario_id, descricao, titulo)
+VALUES (8, 3, 2, 'Saiba mais sobre a história da Segunda Guerra Mundial.', '2ª Guerra');
+
+-- Artigo 9
+INSERT INTO tutoria."ARTIGO" (fk_usuario_id, fk_tema_id, fk_funcionario_id, descricao, titulo)
+VALUES (9, 4, 1, 'A escultura em argila é uma forma de arte única.', 'Escul Arg');
+
+-- Artigo 10
+INSERT INTO tutoria."ARTIGO" (fk_usuario_id, fk_tema_id, fk_funcionario_id, descricao, titulo)
+VALUES (10, 5, 2, 'Aprenda idiomas com dicas práticas.', 'Idiomas D');
+
+#INSERT DE PARTICIPAÇÃO DO USUÁRIO NAS SALAS
+-- Participação do Usuário 1 em Salas 1, 2 e 3
+INSERT INTO tutoria."PARTICIPA" (fk_sala_id, fk_usuario_id)
+VALUES (1, 1), (2, 1), (3, 1);
+
+-- Participação do Usuário 2 em Salas 2, 3 e 4
+INSERT INTO tutoria."PARTICIPA" (fk_sala_id, fk_usuario_id)
+VALUES (2, 2), (3, 2), (4, 2);
+
+-- Participação do Usuário 3 em Salas 3, 4 e 5
+INSERT INTO tutoria."PARTICIPA" (fk_sala_id, fk_usuario_id)
+VALUES (3, 3), (4, 3), (5, 3);
+
+-- Participação do Usuário 4 em Salas 4 e 5
+INSERT INTO tutoria."PARTICIPA" (fk_sala_id, fk_usuario_id)
+VALUES (4, 4), (5, 4);
+
+-- Participação do Usuário 5 em Salas 5, 1 e 2
+INSERT INTO tutoria."PARTICIPA" (fk_sala_id, fk_usuario_id)
+VALUES (5, 5), (1, 5), (2, 5);
+
+-- Participação do Usuário 6 em Salas 6, 7 e 8
+INSERT INTO tutoria."PARTICIPA" (fk_sala_id, fk_usuario_id)
+VALUES (6, 6), (7, 6), (8, 6);
+
+-- Participação do Usuário 7 em Salas 7, 8 e 9
+INSERT INTO tutoria."PARTICIPA" (fk_sala_id, fk_usuario_id)
+VALUES (7, 7), (8, 7), (9, 7);
+
+-- Participação do Usuário 8 em Salas 8, 9 e 10
+INSERT INTO tutoria."PARTICIPA" (fk_sala_id, fk_usuario_id)
+VALUES (8, 8), (9, 8), (10, 8);
+
+-- Participação do Usuário 9 em Salas 9 e 10
+INSERT INTO tutoria."PARTICIPA" (fk_sala_id, fk_usuario_id)
+VALUES (9, 9), (10, 9);
+
+-- Participação do Usuário 10 em Salas 10, 1 e 2
+INSERT INTO tutoria."PARTICIPA" (fk_sala_id, fk_usuario_id)
+VALUES (10, 10), (1, 10), (2, 10);
+
+#INSERT DE SALAS
+
+-- Sala 1
+INSERT INTO tutoria."SALA" (fk_tema_id, fk_usuario_id, data_criacao, sts_valida)
+VALUES (1, 1, '2023-05-10', true);
+
+-- Sala 2
+INSERT INTO tutoria."SALA" (fk_tema_id, fk_usuario_id, data_criacao, sts_valida)
+VALUES (2, 2, '2023-06-15', true);
+
+-- Sala 3
+INSERT INTO tutoria."SALA" (fk_tema_id, fk_usuario_id, data_criacao, sts_valida)
+VALUES (3, 3, '2023-07-20', true);
+
+-- Sala 4
+INSERT INTO tutoria."SALA" (fk_tema_id, fk_usuario_id, data_criacao, sts_valida)
+VALUES (4, 4, '2023-08-25', true);
+
+-- Sala 5
+INSERT INTO tutoria."SALA" (fk_tema_id, fk_usuario_id, data_criacao, sts_valida)
+VALUES (5, 5, '2023-09-23', true);
+
+-- Sala 6
+INSERT INTO tutoria."SALA" (fk_tema_id, fk_usuario_id, data_criacao, sts_valida)
+VALUES (1, 6, '2023-05-15', true);
+
+-- Sala 7
+INSERT INTO tutoria."SALA" (fk_tema_id, fk_usuario_id, data_criacao, sts_valida)
+VALUES (2, 7, '2023-06-20', true);
+
+-- Sala 8
+INSERT INTO tutoria."SALA" (fk_tema_id, fk_usuario_id, data_criacao, sts_valida)
+VALUES (3, 8, '2023-07-25', true);
+
+-- Sala 9
+INSERT INTO tutoria."SALA" (fk_tema_id, fk_usuario_id, data_criacao, sts_valida)
+VALUES (4, 9, '2023-08-30', true);
+
+-- Sala 10
+INSERT INTO tutoria."SALA" (fk_tema_id, fk_usuario_id, data_criacao, sts_valida)
+VALUES (5, 10, '2023-09-15', true);
+
+#INSERT DE USUÁRIOS
+
+-- Usuário 1
+INSERT INTO tutoria."USUARIO_TEMA" (nivel_conhecimento, fk_usuario_id, fk_tema_id)
+VALUES (2, 1, 1), (3, 1, 2), (1, 1, 3), (4, 1, 4), (2, 1, 5);
+
+-- Usuário 2
+INSERT INTO tutoria."USUARIO_TEMA" (nivel_conhecimento, fk_usuario_id, fk_tema_id)
+VALUES (3, 2, 1), (2, 2, 2), (1, 2, 3), (4, 2, 4), (3, 2, 5);
+
+-- Usuário 3
+INSERT INTO tutoria."USUARIO_TEMA" (nivel_conhecimento, fk_usuario_id, fk_tema_id)
+VALUES (1, 3, 1), (4, 3, 2), (2, 3, 3), (3, 3, 4), (1, 3, 5);
+
+-- Usuário 4
+INSERT INTO tutoria."USUARIO_TEMA" (nivel_conhecimento, fk_usuario_id, fk_tema_id)
+VALUES (4, 4, 1), (3, 4, 2), (2, 4, 3), (1, 4, 4), (4, 4, 5);
+
+-- Usuário 5 (Adicione instruções para os outros usuários)
+INSERT INTO tutoria."USUARIO_TEMA" (nivel_conhecimento, fk_usuario_id, fk_tema_id)
+VALUES (3, 5, 1), (2, 5, 2), (1, 5, 3), (4, 5, 4), (3, 5, 5);
+
+-- Usuário 6
+INSERT INTO tutoria."USUARIO_TEMA" (nivel_conhecimento, fk_usuario_id, fk_tema_id)
+VALUES (1, 6, 1), (4, 6, 2), (2, 6, 3), (3, 6, 4), (1, 6, 5);
+
+-- Usuário 7
+INSERT INTO tutoria."USUARIO_TEMA" (nivel_conhecimento, fk_usuario_id, fk_tema_id)
+VALUES (4, 7, 1), (3, 7, 2), (2, 7, 3), (1, 7, 4), (4, 7, 5);
+
+-- Usuário 8
+INSERT INTO tutoria."USUARIO_TEMA" (nivel_conhecimento, fk_usuario_id, fk_tema_id)
+VALUES (2, 8, 1), (3, 8, 2), (1, 8, 3), (4, 8, 4), (2, 8, 5);
+
+-- Usuário 9
+INSERT INTO tutoria."USUARIO_TEMA" (nivel_conhecimento, fk_usuario_id, fk_tema_id)
+VALUES (3, 9, 1), (2, 9, 2), (1, 9, 3), (4, 9, 4), (3, 9, 5);
+
+-- Usuário 10
+INSERT INTO tutoria."USUARIO_TEMA" (nivel_conhecimento, fk_usuario_id, fk_tema_id)
+VALUES (1, 10, 1), (4, 10, 2), (2, 10, 3), (3, 10, 4), (1, 10, 5);
+
+#INSERT DE FUNCIONÁRIOS
+
+INSERT INTO tutoria."FUNCIONARIO" (salario, fk_usuario_id, matricula)
+VALUES (5000.00, 1, 'MAT12345');
+
+INSERT INTO tutoria."FUNCIONARIO" (salario, fk_usuario_id, matricula)
+VALUES (6000.00, 2, 'MAT67890');
+
+#INSERT DE TEMAS
+
+INSERT INTO tutoria."TEMA" (fk_categoria_id, descricao)
+VALUES (1, 'Álgebra Linear');
+
+INSERT INTO tutoria."TEMA" (fk_categoria_id, descricao)
+VALUES (1, 'Cálculo Diferencial');
+
+INSERT INTO tutoria."TEMA" (fk_categoria_id, descricao)
+VALUES (2, 'Biologia Celular');
+
+INSERT INTO tutoria."TEMA" (fk_categoria_id, descricao)
+VALUES (2, 'Química Orgânica');
+
+INSERT INTO tutoria."TEMA" (fk_categoria_id, descricao)
+VALUES (3, 'Idade Média');
+
+INSERT INTO tutoria."TEMA" (fk_categoria_id, descricao)
+VALUES (3, 'Segunda Guerra Mundial');
+
+INSERT INTO tutoria."TEMA" (fk_categoria_id, descricao)
+VALUES (4, 'Pintura a Óleo');
+
+INSERT INTO tutoria."TEMA" (fk_categoria_id, descricao)
+VALUES (4, 'Escultura em Argila');
+
+INSERT INTO tutoria."TEMA" (fk_categoria_id, descricao)
+VALUES (5, 'Inglês Avançado');
+
+INSERT INTO tutoria."TEMA" (fk_categoria_id, descricao)
+VALUES (5, 'Espanhol Básico');
+
+#INSERT DE CATEGORIA
+
+INSERT INTO categorias (descricao)
+VALUES
+    ('Matemática'),
+    ('Ciências'),
+    ('História'),
+    ('Artes'),
+    ('Idiomas'),
+    ('Programação'),
+    ('Música'),
+    ('Esportes'),
+    ('Saúde'),
+    ('Negócios');
+
+ '''
+
 ### 9    TABELAS E PRINCIPAIS CONSULTAS<br>
 
     OBS: Usa template da disciplina disponibilizado no Colab.<br>
