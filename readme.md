@@ -543,6 +543,9 @@ https://colab.research.google.com/drive/1HNumDDBddG0WGDo5eRlWGiPKrJ0iL6_l?usp=sh
 ```
 
 #### 9.2    CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
+```
+https://colab.research.google.com/drive/1HNumDDBddG0WGDo5eRlWGiPKrJ0iL6_l?usp=sharing#scrollTo=V2xdOn3fc4Cr
+```
 
 #### 9.3    CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
 
