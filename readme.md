@@ -553,9 +553,9 @@ https://colab.research.google.com/drive/1HNumDDBddG0WGDo5eRlWGiPKrJ0iL6_l?usp=sh
     b) Criar no mínimo 3 consultas com operadores aritméticos 
     c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
 
-    ```
-	https://colab.research.google.com/drive/1HNumDDBddG0WGDo5eRlWGiPKrJ0iL6_l?usp=sharing#scrollTo=V2xdOn3fc4Cr
-    ```
+```
+https://colab.research.google.com/drive/1HNumDDBddG0WGDo5eRlWGiPKrJ0iL6_l?usp=sharing#scrollTo=V2xdOn3fc4Cr
+```
 
 #### 9.4    CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
 
