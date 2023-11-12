@@ -21,10 +21,10 @@ Descrição textual das regras de negócio definidas como um  subconjunto do mun
 cujos elementos são propriedades que desejamos incluir, processar, armazenar, 
 gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
 
->	Uma plataforma de tutoria busca reunir pessoas qualificadas em uma ampla variedade de assuntos e aquelas que desejam se especializar nesses temas. Para atingir esse objetivo, a plataforma precisa de um sistema que possa agrupar essas pessoas em salas de tutoria, onde poderão colaborar e se ajudar mutuamente durante o período de tutoria. Além disso, os tutores devem ser capazes de disponibilizar conteúdo para os alunos, e todos os participantes devem poder se comunicar por meio de um chat de texto, áudio e vídeo.<br>
+>	Uma plataforma de tutoria busca reunir pessoas qualificadas em uma ampla variedade de assuntos e aquelas que desejam se especializar nesses temas. Para atingir esse objetivo, a plataforma precisa de um sistema que possa agrupar essas pessoas em salas de tutoria, onde poderão colaborar e se ajudar mutuamente durante o período de tutoria. A.<br>
 	Para isso, cada usuário deverá ter: ID, nome, e-mail, telefone e senha. Dentro dos usuários,  teremos  funcionários, que terão os mesmos atributos de usuários, além de matrícula e salário.<br>
 	Em relação aos temas, cada tema da plataforma deverá ter um ID, descrição e categoria à qual esse tema pertence. As salas criadas deverão também conter um ID, aluno, tutor e tema abordado na sala, além de material complementar disponibilizado, se houver.<br>
-	Além disso, a plataforma terá um acervo público, onde os próprios usuários vão poder alimentá-lo com publicações. Os conteúdos publicados deverão ser curados por usuários administradores da plataforma, que são os funcionários. Cada publicação deve ter um ID próprio, seu autor e tema abordado.<br>
+	Além disso, a plataforma terá um acervo público, onde os próprios usuários vão poder alimentá-lo com publicações. Os conteúdos publicados deverão ser curados por usuários administradores da plataforma, que são os funcionários. Cada publicação deve ter um ID próprio, seu autor,data, status de aprovação e tema abordado.<br>
 	
 ### 3.PERGUNTAS A SEREM RESPONDIDAS<br>
 
