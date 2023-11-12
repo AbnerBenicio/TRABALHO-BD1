@@ -25,8 +25,7 @@ gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
 	Para isso, cada usuário deverá ter: ID, nome, e-mail, telefone e senha. Dentro dos usuários,  teremos  funcionários, que terão os mesmos atributos de usuários, além de matrícula e salário.<br>
 	Em relação aos temas, cada tema da plataforma deverá ter um ID, descrição e categoria à qual esse tema pertence. As salas criadas deverão também conter um ID, aluno, tutor e tema abordado na sala, além de material complementar disponibilizado, se houver.<br>
 	Além disso, a plataforma terá um acervo público, onde os próprios usuários vão poder alimentá-lo com publicações. Os conteúdos publicados deverão ser curados por usuários administradores da plataforma, que são os funcionários. Cada publicação deve ter um ID próprio, seu autor e tema abordado.<br>
-	Por fim, haverá também uma loja onde os usuários poderão trocar pontos, obtidos ao ministrar tutoria e publicar no acervo da plataforma, por brindes. Sendo assim, cada produto deverá ter um ID, nome e valor.
-
+	
 ### 3.PERGUNTAS A SEREM RESPONDIDAS<br>
 
 #### 3.1 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
