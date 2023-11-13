@@ -114,7 +114,8 @@ b)
         b) verificação de correspondencia com o modelo conceitual 
         (não serão aceitos modelos que não estejam em conformidade)
 
- ![logico_trabalho_img](https://github.com/AbnerBenicio/TRABALHO-BD1/assets/112874576/b50c8e42-d443-4280-8ce0-2654684f253e)
+ ![image](https://github.com/AbnerBenicio/TRABALHO-BD1/assets/112874576/e3a5778f-e282-497f-b5b0-59f8f8a82d7d)
+
 
 
 ### 7    MODELO FÍSICO<br>
