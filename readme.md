@@ -39,14 +39,13 @@ b)
 
 1. Uso do sistema (tutores e tutorados)
 
-2. Assuntos mais pedidos
+2. Assuntos mais ensinados em sala
 
-3. Materiais no acervo
+3. Usuários que mais publicaram artigos
 
-4. Pessoas e seus assuntos de conhecimento
+4. Temas e a frequência que artigos foram publicados sobre eles
 
-5. Situação de uma pessoa na loja virtual
-
+5. Salas ativas no sistema
 ### 5.MODELO CONCEITUAL<br>
 
     A) Utilizar a Notação adequada (Preferencialmente utilizar o BR Modelo 3)
