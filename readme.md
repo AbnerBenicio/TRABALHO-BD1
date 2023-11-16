@@ -434,6 +434,38 @@ VALUES (5, 10, '2023-09-15', true);
 
 #INSERT DE USUÁRIOS
 
+INSERT INTO tutoria."USUARIO" (nome, email, senha)
+VALUES ('João', 'joao@email.com', 'senha123');
+
+INSERT INTO tutoria."USUARIO" (nome, email, senha)
+VALUES ('Maria', 'maria@email.com', 'senha456');
+
+INSERT INTO tutoria."USUARIO" (nome, email, senha)
+VALUES ('Pedro', 'pedro@email.com', 'senha789');
+
+INSERT INTO tutoria."USUARIO" (nome, email, senha)
+VALUES ('Ana', 'ana@email.com', 'senhaabc');
+
+INSERT INTO tutoria."USUARIO" (nome, email, senha)
+VALUES ('Carlos', 'carlos@email.com', 'senhaxyz');
+
+INSERT INTO tutoria."USUARIO" (nome, email, senha)
+VALUES ('Laura', 'laura@email.com', 'senhalaura');
+
+INSERT INTO tutoria."USUARIO" (nome, email, senha)
+VALUES ('Miguel', 'miguel@email.com', 'senha777');
+
+INSERT INTO tutoria."USUARIO" (nome, email, senha)
+VALUES ('Sofia', 'sofia@email.com', 'senha999');
+
+INSERT INTO tutoria."USUARIO" (nome, email, senha)
+VALUES ('Lucas', 'lucas@email.com', 'senha654');
+
+INSERT INTO tutoria."USUARIO" (nome, email, senha)
+VALUES ('Isabella', 'isabella@email.com', 'senha1234');
+
+#INSERT DE USUÁRIOS/TEMA
+
 -- Usuário 1
 INSERT INTO tutoria."USUARIO_TEMA" (nivel_conhecimento, fk_usuario_id, fk_tema_id)
 VALUES (2, 1, 1), (3, 1, 2), (1, 1, 3), (4, 1, 4), (2, 1, 5);
