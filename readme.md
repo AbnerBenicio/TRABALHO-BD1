@@ -125,9 +125,6 @@ b)
 ```
 BEGIN;
 
-
-DROP TABLE IF EXISTS public.usuario;
-
 CREATE TABLE IF NOT EXISTS public.usuario
 (
     id integer NOT NULL DEFAULT SERIAL,
@@ -287,6 +284,8 @@ END;
 
 ```
 #DROP TABLES
+
+DROP TABLE IF EXISTS public.usuario;
 
 DROP TABLE IF EXISTS tutoria."ARTIGO";
 
