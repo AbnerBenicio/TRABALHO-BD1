@@ -37,7 +37,7 @@ a) O sistema poderá fornecer informações sobre as pessoas cadastradas, suas p
 
 b)
 
-1. Temas com maior nível de conhecimento médio
+1. Funcionário que mais validaram artigos
 
 2. Assuntos mais ensinados em sala
 
