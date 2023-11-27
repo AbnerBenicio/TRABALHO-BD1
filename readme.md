@@ -667,6 +667,11 @@ https://colab.research.google.com/drive/1HNumDDBddG0WGDo5eRlWGiPKrJ0iL6_l?usp=sh
 
 #### b) link com exemplo de relatórios será disponiblizado pelo professor no AVA
 
+<strong>RELATÓRIOS E GRÁFICOS:</strong>
+```
+https://colab.research.google.com/drive/10XHEI4_1NfRl7O1TObsBkJWQY-KvGQkg?usp=sharing
+```
+
 #### OBS: Esta é uma atividade de grande relevância no contexto do trabalho. Mantenha o foco nos 5 principais relatórios/resultados visando obter o melhor resultado possível.
 
 ### 11    AJUSTES DA DOCUMENTAÇÃO, CRIAÇÃO DOS SLIDES E VÍDEO PARA APRESENTAÇAO FINAL <br>
