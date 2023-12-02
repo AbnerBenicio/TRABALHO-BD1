@@ -678,6 +678,15 @@ https://colab.research.google.com/drive/10XHEI4_1NfRl7O1TObsBkJWQY-KvGQkg?usp=sh
 
 #### a) Modelo (pecha kucha)<br>
 
+<br>SLIDES:</br>
+```
+https://docs.google.com/presentation/d/1cNBYtMgNC8mVGL_NVOjFVdNZ7ZVzwr6yueF15OHl0MQ/edit?usp=sharing
+```
+<br>VÍDEO:</br>
+```
+https://youtu.be/CUYEmksGYOE
+```
+
 #### b) Tempo de apresentação 6:40
 
 > # Marco de Entrega 04: Itens 10 e 11 (20 PTS) <br>
